@@ -1,12 +1,12 @@
 <template>
   <div class="min-h-screen bg-white flex flex-col mt-[32px]">
-    <!-- HEADER -->
+  
     <header class="flex justify-between items-center h-[80px] px-8 border-b border-gray-300">
       <div class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Хочу проект</div>
       <button class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center ">Выйти</button>
     </header>
 
-    <!-- MAIN CONTENT -->
+
     <div class="flex flex-grow px-8 py-8 gap-8">
       <!-- Sidebar -->
       <aside class="w-[204px] h-[1004px] rounded-[40px] border border-black p-4 flex flex-col gap-4">
@@ -58,11 +58,11 @@
   </div>
 </section>
 
-      <!-- Placeholder for additional content -->
+
       <section class="w-[1000px] h-[1004px] rounded-[40px] border border-black"></section>
     </div>
 
-    <!-- FOOTER -->
+
     <Footer />
   </div>
 </template>

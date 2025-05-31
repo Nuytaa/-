@@ -1,24 +1,21 @@
 
 <template>
- <footer class="bg-[#000000] text-white px-4 py-10 rounded-t-3xl h-[800px] mt-[150px] w-[1856px] mx-auto">
-    <div class="max-w-[1856px] mx-auto flex flex-col gap-8">
+<footer class="w-[1856px] h-[800px] bg-black text-white rounded-[20px] px-8 py-8 relative overflow-hidden mx-auto">
 
-      <!-- Логотип -->
-      <div class="text-4xl font-extrabold leading-tight tracking-tight pt-[350px] pl-[68px]">
-        <p class="font-black text-9xl">iTeam</p>
-        <p class="font-black text-9xl">PROJECT</p>
-      </div>
+  <!-- Логотип -->
+  <div class="text-4xl font-extrabold leading-tight tracking-tight pt-[350px] pl-[68px]">
+    <p class="font-black text-9xl">iTeam</p>
+    <p class="font-black text-9xl">PROJECT</p>
+  </div>
 
-      <!-- Белая линия -->
-      <div class="border-t border-white pl-[68px]"></div>
+  <!-- Картинка (фон/украшение) -->
+  <img src="/footer.png" alt="Украшение" class="absolute right-0 bottom-0 w-auto h-auto z-0 pointer-events-none mb-[180px]" />
 
-      <!-- Нижняя навигация -->
-      <div class="flex flex-col sm:flex-row justify-between text-sm font-light text-center sm:text-left gap-2">
-        <span class="text-3xl font-normal pl-[68px]">Хочу проект 2025</span>
-        <span class="text-3xl font-normal">Политика конфиденциальности</span>
-        <span class="text-3xl font-normal">iTeam</span>
-      </div>
-
-    </div>
-  </footer>
+  <!-- Нижняя линия и ссылки -->
+  <div class="absolute bottom-6 left-8 right-8 border-t-[3px] border-gray-700 p-4 flex justify-between text-3xl">
+    <div>Хочу проект 2025</div>
+    <div>Политика конфиденциальности</div>
+    <div>iTeam</div>
+  </div>
+</footer>
 </template>
