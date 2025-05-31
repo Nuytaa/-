@@ -18,7 +18,6 @@
         <!-- Десктоп  -->
         <div class="md:flex space-x-8 text-black text-3xl w-[313px] h-[82px] flex items-center justify-center rounded-[40px] font-normal border-1 border-primary">
           <button @click="modalRef.show = true" class="hover:text-[#0BC1BF]">Вход \ Регистрация</button>
-          <Modal ref="modalRef" />
         </div>
 
         <!-- Бургер меню -->

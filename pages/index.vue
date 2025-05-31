@@ -7,9 +7,16 @@
     <projects_memory />
     <about_us />
     <team_card />
+    <Call_to_action />
     <Footer />
 
-    <!-- <Modal /> -->
+    <Modal ref="Modal" /> 
+    
+    <button @click="$refs.Modal.mode = 'login'; $refs.Modal.show = true">Открыть Вход</button>
+    <button @click="$refs.Modal.mode = 'register'; $refs.Modal.show = true">Открыть Регистрацию</button>
+    <button @click="$refs.Modal.mode = 'forgot'; $refs.Modal.show = true">Открыть Восстановление</button>
+
+
 
     <!-- <authorization /> -->
     
@@ -17,6 +24,8 @@
 </template>
 
 <script setup>
+import Call_to_action from '~/components/call_to_action.vue';
+
 // const cards = [
 //   {
 //     title: 'Консоль управления',
