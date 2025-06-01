@@ -56,7 +56,12 @@
           <tbody class="text-2xl text-normal">
             <tr v-for="(user, index) in users" :key="index" class="border-b h-[75px]">
               <td>{{ user.number }}</td>
-              <td class="text-[#0BC1BF] underline">{{ user.full_name }}</td>
+             
+              <td class="text-[#0BC1BF] underline">
+                 <NuxtLink to="/user/graph">
+                  {{ user.full_name }}
+                 </NuxtLink>
+                </td>
               <td>{{ user.project_type }}</td>
               <td>{{ user.completion_date }}</td>
               <td class="text-[#B0BAC9] text-2xl">...</td>

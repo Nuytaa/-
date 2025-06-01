@@ -76,7 +76,10 @@
               <td class="p-4"><input type="checkbox" class="w-[24px] h-[24px]" /></td>
               <td class="flex items-center gap-4 text-2xl pt-[15px]">
                 <img :src="user.avatar" class="w-[40px] h-[40px] object-cover" />
-                {{ user.name }}
+                 <NuxtLink to="/manager/calculation">
+                  {{ user.name }}  
+                 </NuxtLink>
+                
               </td>
               <td>
                 <span
