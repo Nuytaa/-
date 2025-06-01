@@ -2,19 +2,41 @@
   <div class="min-h-screen bg-white flex flex-col mt-[32px]">
   
     <header class="flex justify-between items-center h-[80px] px-8 border-b border-gray-300">
-      <div class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Хочу проект</div>
-      <button class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center ">Выйти</button>
+      <button
+        class="flex items-center gap-2 w-[250px] h-[60px] px-4 rounded-full border border-gray-300 shadow-sm hover:shadow-md transition bg-white"
+      >
+        <!-- Аватар -->
+        <img
+          src="/profile.png"
+          alt="avatar"
+          class="w-[32px] h-[32px] rounded-full object-cover"
+        />
+
+        <!-- Фамилия Имя -->
+        <span class="text-black text-base font-medium">Семенова Анна</span>
+
+        <!-- Иконка стрелки -->
+        <svg
+          class="w-4 h-4 text-gray-600 ml-auto"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
     </header>
 
 
     <div class="flex flex-grow px-8 py-8 gap-8">
-      <!-- Sidebar -->
-      <aside class="w-[204px] h-[1004px] rounded-[40px] border border-black p-4 flex flex-col gap-4">
-        <button class="text-left hover:text-teal-500">Команды</button>
-        <button class="text-left hover:text-teal-500">Проекты</button>
-        <button class="text-left hover:text-teal-500">Заявки</button>
-        <button class="text-left text-teal-500 font-medium">Настройки</button>
-      </aside>
+       <!-- Левая панель -->
+    <aside class="w-[204px] h-[1004px] rounded-[40px] bg-white p-6 text-[32px] font-normal flex flex-col gap-6 border">
+      <NuxtLink to="/manager/teams" class="cursor-pointer">Команды</NuxtLink>
+      <NuxtLink to="#" class="cursor-pointer">Проекты</NuxtLink>
+      <NuxtLink to="/manager/requests" class="cursor-pointer">Заявки</NuxtLink >
+      <NuxtLink to="/manager/settings" class="text-[#0BC1BF] cursor-pointer">Настройки</NuxtLink>
+    </aside>
 
       <section class="w-[558px] h-[558px] rounded-[40px] border border-black p-6">
   <!-- Верхняя часть: аватар + имя и email -->

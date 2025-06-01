@@ -1,6 +1,6 @@
 
 <template>
-<footer class="w-[1856px] h-[800px] bg-black text-white rounded-[20px] px-8 py-8 relative overflow-hidden mx-auto">
+<footer id="contact" class="w-[1856px] h-[800px] bg-black text-white rounded-[20px] px-8 py-8 relative overflow-hidden mx-auto">
 
   <!-- Логотип -->
   <div class="text-4xl font-extrabold leading-tight tracking-tight pt-[350px] pl-[68px]">

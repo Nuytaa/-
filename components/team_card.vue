@@ -1,6 +1,6 @@
 
 <template>
-  <div class="max-w-[1856px] mx-auto px-4 py-16 mt-[150px]">
+  <div id="teams" class="max-w-[1856px] mx-auto px-4 py-16 mt-[150px]">
     <div class="grid grid-cols-4 gap-4 auto-rows-[600px]">
       <!-- Блок 1 -->
       <div class="bg-[#0BC1BF] text-white p-6 flex items-start justify-start text-4xl font-black rounded-[40px] pt-[45px]">

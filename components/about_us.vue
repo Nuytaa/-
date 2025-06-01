@@ -56,7 +56,7 @@
    <section class="w-full flex justify-center px-8 mt-[150px]">
     <div class="max-w-[1856px] w-full grid grid-cols-3 gap-4">
       <!-- Маленький информационный блок -->
-      <div class="col-span-1 bg-white rounded-[40px] p-8 flex flex-col justify-center text-center font-black">
+      <div id="projects" class="col-span-1 bg-white rounded-[40px] p-8 flex flex-col justify-center text-center font-black">
         <h2 class="text-6xl mb-4r mb-[30px]">Проекты</h2>
         <p class="text-3xl">Наш сервис помогает <br> реализовать множество <br> проектов для различного <br> бизнеса</p>
       </div>
