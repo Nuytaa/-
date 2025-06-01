@@ -101,8 +101,7 @@
             Восстановить
           </button>
 
-> Nuyta:
-<p class="text-sm text-black mt-4">
+          <p class="text-sm text-black mt-4">
             Вспомнили пароль?
             <a href="#" @click.prevent="mode = 'login'" class="text-[#0BC1BF] font-medium">Войти</a>
           </p>

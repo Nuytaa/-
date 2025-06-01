@@ -2,6 +2,9 @@
   <div class="min-h-screen bg-white flex flex-col mt-[32px]">
   
     <header class="flex justify-between items-center h-[80px] px-8 border-b border-gray-300">
+      <NuxtLink to="/">
+        <button class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Выйти</button>
+      </NuxtLink>
       <button
         class="flex items-center gap-2 w-[250px] h-[60px] px-4 rounded-full border border-gray-300 shadow-sm hover:shadow-md transition bg-white"
       >
@@ -70,6 +73,7 @@
       <label class="text-2xl text-gray-900 font-medium">Номер телефона</label>
       <div class="text-2xl text-[#858585]">Add number</div>
     </div>
+    
   </div>
 
   <!-- Кнопка -->

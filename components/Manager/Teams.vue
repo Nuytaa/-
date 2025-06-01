@@ -2,7 +2,9 @@
      <div class="mt-[32px] mb-[32px]">
          <header class="flex justify-between items-center h-[80px] px-8 border-b border-gray-300">
             <div class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Хочу проект</div>
-            <button class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Выйти</button>
+            <NuxtLink to="/">
+               <button class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Выйти</button>
+            </NuxtLink>
         </header>  
      </div>
 

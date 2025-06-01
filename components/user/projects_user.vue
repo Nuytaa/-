@@ -3,28 +3,17 @@
          <header class="flex justify-between items-center h-[80px] px-8 border-b border-gray-300">
             <div class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Хочу проект</div>
             <NuxtLink to="/">
-               <button class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Выйти</button>
+              <button class="text-2xl font-semibold border w-[328px] h-[82px] rounded-[40px] text-center flex items-center justify-center">Выйти</button>
             </NuxtLink>
         </header>  
      </div>
 
   <div class="flex min-h-screen p-4">
-    <!-- Левая панель -->
-    <aside class="w-[204px] h-[1004px] rounded-[40px] bg-white p-6 text-[32px] font-normal flex flex-col gap-6 border">
-      <NuxtLink to="/manager/teams" class="cursor-pointer">Команды</NuxtLink>
-      <NuxtLink to="#" class="cursor-pointer">Проекты</NuxtLink>
-       <div class="relative w-fit">
-            <NuxtLink to="/manager/requests" class="text-[#00C2C2]">Заявки</NuxtLink>
-            <span
-            v-if="count > 0"
-            class="absolute -top-2 -right-4 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full"
-            >
-            {{ count }}
-            </span>
-        </div>
-        
-      <NuxtLink href="/manager/settings" class="cursor-pointer">Настройки</NuxtLink>
-    </aside>
+      <!-- Левая панель -->
+        <aside class="w-[204px] h-[1004px] rounded-[40px] bg-white p-6 text-[32px] font-normal flex flex-col gap-6 border">
+        <NuxtLink to="/user/progects_user" class="text-[#0BC1BF]  cursor-pointer">Проекты</NuxtLink>
+        <NuxtLink to="/user/settings_user" class="cursor-pointer">Настройки</NuxtLink>
+        </aside>
 
     <!-- Основной контент -->
     <div class="ml-8 flex-1">
@@ -34,7 +23,6 @@
           <option>001</option>
         </select>
         <select class="w-[281px] h-[80px] rounded-[40px] border px-4 text-2xl">
-    
           <option>ФИО</option>
         </select>
         <div class="flex gap-4">
@@ -55,14 +43,12 @@
       <!-- Таблица -->
       <div class="w-[1620px] h-[661px] bg-white rounded-[40px] p-10 shadow-md overflow-auto border">
         <table class="w-full table-auto text-left">
-          <thead>
-            <tr class="border-b text-2xl">
-              <th class="w-[217px] pb-[20px]">Номер заявки</th>
-              <th class="w-[517px] pb-[20px]">ФИО</th>
-              <th class="w-[365px] pb-[20px]">Тип проекта</th>
-              <th class="w-[351px] pb-[20px]">Срок выполнения</th>
-              <th class="w-[106px] pb-[20px]">Action</th>
-            </tr>
+          <thead class="text-center">
+           
+              <p class="font-black text-3xl text-[#858585] mt-[190px]">Не найдено ни одного проекта</p>
+              <p class="font-black text-[16px] text-[#858585] text-center mt-[16px]">Чтобы воспользоваться нашим сервисом <br>вам необходимо заполнить заявку</p>
+              <button  @click="isModalOpen = true" class="w-[281px] h-[80px] bg-[#0BC1BF] text-white rounded-[40px] text-2xl mt-[20px]">Хочу проект</button>
+              <ModalUser :isOpen="isModalOpen" @close="isModalOpen = false" />
           </thead>
           <tbody class="text-2xl text-normal">
             <tr v-for="(user, index) in users" :key="index" class="border-b h-[75px]">
@@ -97,43 +83,11 @@
   </div>
 
   <Footer />
+
 </template>
 
 <script setup>
-const users = [
-  {
-    number: '#1001',
-    full_name: 'Миронова Наталья Алексадровна',
-    project_type: 'Корпоративный сайт',
-    completion_date: 'от 01.06.2025 до 29.07.2025',
-  },
-  {
-    number: '#1000',
-    full_name: 'Дьяконов Андрей Алексеевич',
-    project_type: 'Лендинг',
-    completion_date: 'от 31.05.2025 до 20.06.2025',
-  },
-    {
-    number: '#999',
-    full_name: 'Суворов Александр Анатольевич',
-    project_type: 'Сайт-игра',
-    completion_date: 'от 20.01.2025 до 01.09.2025',
-  },
-]
-
-const statusClass = (status) => {
-  switch (status) {
-    case 'Свободен':
-      return 'border-[#7FC008] text-[#7FC008]'
-    case 'Занят':
-      return 'border-[#DB303F] text-[#DB303F]'
-    case 'Pending':
-      return 'border-[#DB8C28] text-[#DB8C28]'
-    default:
-      return 'bg-gray-100 text-gray-700'
-  }
-}
-
-const count = ref(1); // или получать из API
+import ModalUser from '@/components/user/modal_user.vue'
+const isModalOpen = ref(false)
 </script>
 
